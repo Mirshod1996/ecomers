@@ -1,0 +1,17 @@
+.error {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://usersnap.com/blog/wp-content/uploads/2016/08/creative-error-404-pages.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-btn {
+    color: white;
+    padding-top: 50vh;
+    font-size: 10vh;
+    text-shadow: -1px -14px 14px rgba(43, 204, 206, 0.79);
+    cursor: pointer;
+  }
+}

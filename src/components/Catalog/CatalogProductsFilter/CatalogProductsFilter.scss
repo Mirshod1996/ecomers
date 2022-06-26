@@ -1,0 +1,74 @@
+.catalog-filteres {
+  margin-right: var(--margin-50);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1rem;
+
+  .filter-input-text {
+    margin-bottom: 1rem;
+    .input-text {
+      border: none;
+      background-color: var(--clr-blue-4);
+      padding: 5px 10px;
+    }
+  }
+
+  .catalog-categories {
+    margin-bottom: 1rem;
+    .ul-item {
+      cursor: pointer;
+      &:hover {
+        color: var(--clr-blue-3);
+      }
+    }
+  }
+  .catalog-companies {
+    margin-bottom: 1rem;
+  }
+  .catalog-colors {
+    margin-bottom: 1rem;
+    .colors {
+      display: flex;
+      align-items: center;
+      span {
+        cursor: pointer;
+      }
+      .catalog-colors-All {
+        margin-right: 0.5rem;
+
+        &:hover {
+          color: var(--clr-blue-3);
+          text-decoration: underline;
+        }
+      }
+
+      .catalog-colors-item {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        i {
+          font-size: 0.5rem;
+          color: white;
+          margin: 0px;
+          padding: 0px;
+          align-self: center;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+  .filter-input-range {
+    margin-bottom: 1rem;
+  }
+  .filter-input-checkbox {
+    display: flex;
+    align-items: center;
+    &-title {
+      margin-right: 0.5rem;
+    }
+    margin-bottom: 1rem;
+  }
+}

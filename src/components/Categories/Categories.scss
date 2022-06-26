@@ -1,0 +1,36 @@
+.categories {
+  margin-top: var(--margin-30);
+  h1 {
+    margin: 0px;
+    margin-bottom: var(--margin-30);
+  }
+  .categories-row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 0px;
+  }
+  span {
+    margin-top: var(--margin-30);
+    margin-bottom: var(--margin-100);
+  }
+}
+.categories-card-image {
+  width: 365px;
+  margin-bottom: var(--margin-30);
+  background-color: var(--clr-blue-4);
+  border-radius: var(--radius);
+
+  img {
+    width: 365px;
+    height: 280px;
+    margin-bottom: var(--margin-30);
+    border-top-left-radius: var(--radius);
+    border-top-right-radius: var(--radius);
+  }
+  h5 {
+    margin-bottom: var(--margin-30);
+  }
+}

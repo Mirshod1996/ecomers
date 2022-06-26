@@ -1,0 +1,16 @@
+.backgraund {
+  background-color: var(--clr-blue-4);
+  .report {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: var(--margin-100);
+    padding: var(--margin-50) 0px;
+
+    .report-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

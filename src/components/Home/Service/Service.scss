@@ -1,0 +1,36 @@
+.service {
+  margin: var(--margin-100) 0px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: var(--margin-50);
+  }
+  .box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 226px;
+      width: 300px;
+      box-shadow: inset -1px 0px 0px #c4cdd5, inset 1px 0px 0px #c4cdd5;
+      text-align: center;
+      padding: 0px var(--margin-30);
+      img {
+        margin: var(--margin-30) 0;
+      }
+    }
+  }
+  @media screen and (max-width: 760px) {
+    margin: var(--margin-100) 0px var(--margin-50) 0px;
+    justify-content: center;
+    .box {
+      margin-left: 20px;
+      .card {
+        margin-bottom: var(--margin-30);
+      }
+    }
+  }
+}

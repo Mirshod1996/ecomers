@@ -1,0 +1,105 @@
+.products-title {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--margin-100);
+  margin-bottom: var(--margin-100);
+  @media screen and (max-width: 760px) {
+    margin-top: var(--margin-50);
+    margin-bottom: var(--margin-50);
+
+    .products-icons {
+      display: flex;
+      .products-icon {
+        font-size: 36px;
+      }
+    }
+  }
+}
+
+.products-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  @media screen and (max-width: 760px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+
+.products-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  @media screen and (max-width: 760px) {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
+.products-icon {
+  cursor: pointer;
+  margin: 0 15px;
+  padding-top: 10px;
+  font-size: 24px;
+  &:hover {
+    color: var(--clr-blue-2);
+  }
+}
+
+.product-card {
+  box-shadow: 0px 0px 15px -2px rgba(34, 60, 80, 0.2);
+  margin-bottom: var(--margin-100);
+
+  width: 300px;
+  height: 500px;
+  &-image {
+    width: 300px;
+    height: 300px;
+    border-radius: var(--radius);
+  }
+  .card-main {
+    padding: 0px 10px;
+    h3 {
+      margin-top: var(--margin-30);
+    }
+
+    .card-title {
+      display: flex;
+      justify-content: space-between;
+
+      .input-box {
+        display: flex;
+        align-items: center;
+        input:checked + p {
+          text-decoration: dashed;
+        }
+        p {
+          margin-left: 10px;
+        }
+      }
+      span {
+        background-color: var(--clr-blue-4);
+        padding: 5px 10px;
+        height: 25px;
+        color: var(--clr-blue-2);
+      }
+    }
+    .price {
+      display: flex;
+      align-items: center;
+      .card-price {
+        color: var(--clr-blue-3) !important;
+      }
+      .last-price {
+        text-decoration: line-through;
+        padding-top: 20px;
+        margin-left: 20px;
+        color: var(--clr-black) !important;
+        cursor: pointer;
+      }
+    }
+  }
+}

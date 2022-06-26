@@ -1,0 +1,19 @@
+.exapmle {
+  width: 100%;
+  height: 100%;
+}
+
+.carusel {
+  height: 50vh;
+  width: 40vw;
+  text-align: center;
+  overflow: hidden;
+  border-radius: var(--radius);
+  margin: auto;
+}
+@media screen and (max-width: 760px) {
+  .carusel {
+    width: 40vw;
+    height: 20vh;
+  }
+}

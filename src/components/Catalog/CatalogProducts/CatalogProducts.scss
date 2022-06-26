@@ -1,0 +1,20 @@
+.catalog-products {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.catalog-products-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 760px) {
+  .catalog-products {
+    display: block;
+  }
+  .catalog-products-box {
+    margin-top: var(--margin-30);
+  }
+}

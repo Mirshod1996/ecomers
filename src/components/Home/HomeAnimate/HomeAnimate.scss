@@ -1,0 +1,42 @@
+.home-animate {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background: url("https://c4.wallpaperflare.com/wallpaper/677/106/489/design-style-sofa-interior-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.middle h1 {
+  font-size: 100px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.655);
+  background-image: url("https://s33.postimg.cc/7c66bgri7/water.png");
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: water 15s linear infinite;
+}
+@media screen and (max-width: 760px) {
+  .middle h1 {
+    font-size: 64px;
+  }
+}
+@keyframes water {
+  from {
+    background-position: left 0 top 0;
+  }
+
+  to {
+    background-position: left 1000px top 0;
+  }
+}

@@ -1,0 +1,68 @@
+.recommend {
+  margin: var(--margin-100) 0;
+  .recommend-furnituries {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--margin-50);
+
+    &-title {
+      width: 35vw;
+      h3:hover {
+        color: var(--clr-black);
+      }
+      &-text {
+        text-align: justify;
+      }
+    }
+    &-img {
+      width: 40vw;
+    }
+  }
+  .recommend-equipment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+      width: 35vw;
+      h3:hover {
+        color: var(--clr-black);
+      }
+      &-text {
+        text-align: justify;
+      }
+    }
+    &-img {
+      width: 40vw;
+    }
+  }
+}
+@media screen and (max-width: 760px) {
+  .recommend {
+    margin-top: var(--margin-30);
+    margin-bottom: var(--margin-50);
+
+    .recommend-furnituries {
+      flex-direction: column;
+      &-title {
+        width: 70vw;
+        margin-bottom: var(--margin-30);
+      }
+      &-img {
+        width: 80vw;
+      }
+    }
+
+    .recommend-equipment {
+      flex-direction: column-reverse;
+      &-title {
+        width: 70vw;
+        margin-bottom: var(--margin-30);
+      }
+      &-img {
+        width: 80vw;
+      }
+    }
+  }
+}
