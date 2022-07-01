@@ -1,47 +1,11 @@
 import React from "react";
-import { useContext } from "react";
 import "./CatalogProductsFilter.scss";
 import { useState } from "react";
-import { Context } from "../../Context/Context";
-import { FilterContext } from "../../Context/FilterContext";
+import { useSelector } from "react-redux";
 
 const CatalogProductsFilter = () => {
-  const { products } = useContext(Context);
-  // const {
-  //   filters: {
-  //     text,
-  //     category,
-  //     company,
-  //     color,
-  //     min_price,
-  //     price,
-  //     max_price,
-  //     shipping,
-  //   },
-  //   updateFilters,
-  // } = useContext(FilterContext);
-
-  const [text, setTExt] = useState("");
+  const filters = useSelector((state) => state.productPage.filters);
   const [num, setNum] = useState(0);
-
-  const lastCategories = products.map((item) => item.category);
-  const categories = new Set(lastCategories);
-  const newCategories = ["All", ...categories];
-
-  const lastCompanies = products.map((item) => item.company);
-  const companies = new Set(lastCompanies);
-  const newCompanies = ["all", ...companies];
-
-  const lastColors = products.map((item) => item.colors);
-  const newArr = [];
-  for (let subArr of lastColors) {
-    for (let elem of subArr) {
-      newArr.push(elem);
-    }
-  }
-  const colors = new Set(newArr);
-  const newColors = [...colors];
-
   return (
     <div className="catalog-filteres">
       <div className="filter-input-text">
@@ -49,15 +13,15 @@ const CatalogProductsFilter = () => {
           type="text"
           className="input-text"
           name="text"
-          value={text}
           placeholder="search"
+          readOnly
         />
       </div>
 
       <div className="catalog-categories">
         <h4>Category</h4>
         <ul>
-          {newCategories.map((item, index) => (
+          {filters.category.map((item, index) => (
             <li key={index} className="ul-item">
               {item}
             </li>
@@ -67,7 +31,7 @@ const CatalogProductsFilter = () => {
       <div className="catalog-companies">
         <h4>Company</h4>
         <select name="company" id="">
-          {newCompanies.map((item, index) => (
+          {filters.company.map((item, index) => (
             <option key={index}>{item}</option>
           ))}
         </select>
@@ -76,7 +40,7 @@ const CatalogProductsFilter = () => {
         <h4>Colors</h4>
         <div className="colors">
           <span className="catalog-colors-All">All</span>
-          {newColors.map((item, index) => (
+          {filters.color.map((item, index) => (
             <span
               key={index}
               name="color"

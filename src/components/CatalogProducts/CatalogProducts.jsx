@@ -1,14 +1,12 @@
 import React from "react";
-import { useContext } from "react";
-
+import { useSelector } from "react-redux";
 import CatalogProductsSort from "../CatalogProductsSort/CatalogProductsSort";
 import CatalogProductsCard from "../CatalogProductsCard/CatalogProductsCard";
 import CatalogProductsFilter from "../CatalogProductsFilter/CatalogProductsFilter";
 import "./CatalogProducts.scss";
-import { Context } from "../../Context/Context";
 
 const CatalogProducts = () => {
-  const { furnituries } = useContext(Context);
+  const products = useSelector((state) => state.productPage.products);
   return (
     <div>
       <div className="container">
@@ -19,7 +17,7 @@ const CatalogProducts = () => {
           <div className="catalog-sort-box">
             <CatalogProductsSort />
             <div className="catalog-products-box">
-              {furnituries.map((item) => (
+              {products.map((item) => (
                 <CatalogProductsCard {...item} key={item.id} />
               ))}
             </div>

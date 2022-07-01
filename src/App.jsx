@@ -4,9 +4,15 @@ import NoteFound from "./Pages/NoteFound";
 import Categories from "./Pages/Categories/Categories";
 import Catalog from "./Pages/Catalog/Catalog";
 import { Routes, Route } from "react-router-dom";
-import { FilterContextProvider } from "./Context/FilterContext";
+import { useDispatch } from "react-redux";
+import { getProducts } from "./redux/actions/action-creator";
+import { useEffect } from "react";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
   return (
     <>
       <Routes>
