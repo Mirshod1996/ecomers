@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../assets/images/LogoTop.png";
 import "./Navbar.scss";
 import "../../assets/styles/main.css";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import {
   PhoneOutlined,
@@ -11,6 +11,7 @@ import {
 } from "@ant-design/icons";
 
 const Navbar = () => {
+  
   const setActive = ({ isActive }) => (isActive ? "active" : "");
   return (
     <div className="nav">
@@ -50,7 +51,10 @@ const Navbar = () => {
               </div>
 
               <div className="icon">
-                <ShoppingCartOutlined className="icon" />
+                <Link to="/cart">
+                  {" "}
+                  <ShoppingCartOutlined className="icon" />
+                </Link>
               </div>
             </div>
           </div>

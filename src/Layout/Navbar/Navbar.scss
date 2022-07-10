@@ -46,6 +46,10 @@
 
       .icon {
         margin: 0px 3px;
+        color: var(--clr-black);
+        &:hover {
+          color: var(--clr-blue-3);
+        }
       }
     }
   }

@@ -5,13 +5,15 @@ import { Card } from "antd";
 const { Meta } = Card;
 
 const ProductCard = ({ img, title, description }) => (
-  <Card
-    hoverable
-    className="card-parent"
-    cover={<img alt="example" src={img} className="cover-image " />}
-  >
-    <Meta title={title} description={description} />
-  </Card>
+  <div className="card">
+    <Card
+      hoverable
+      className="card-parent"
+      cover={<img alt="example" src={img} className="cover-image " />}
+    >
+      <Meta title={title} description={description} />
+    </Card>
+  </div>
 );
 
 export default ProductCard;

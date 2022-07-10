@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Saidbar.scss";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import {
   HeartOutlined,
   ShoppingCartOutlined,
@@ -25,9 +25,16 @@ const Saidbar = () => {
           <HeartOutlined
             style={{ fontSize: 28, marginLeft: 10, cursor: "pointer" }}
           />
-          <ShoppingCartOutlined
-            style={{ fontSize: 28, marginLeft: 10, cursor: "pointer" }}
-          />
+          <Link to="/cart">
+            <ShoppingCartOutlined
+              style={{
+                color: "var(--clr-black)",
+                fontSize: 28,
+                marginLeft: 10,
+                cursor: "pointer",
+              }}
+            />
+          </Link>
         </div>
       </div>
 

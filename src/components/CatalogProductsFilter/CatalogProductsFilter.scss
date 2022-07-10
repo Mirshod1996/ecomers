@@ -3,6 +3,7 @@
   position: -webkit-sticky;
   position: sticky;
   top: 1rem;
+  margin-bottom: var(--margin-100);
 
   .filter-input-text {
     margin-bottom: 1rem;
@@ -49,6 +50,8 @@
         border-radius: 50%;
         display: flex;
         justify-content: center;
+        opacity: 0.5;
+
         i {
           font-size: 0.5rem;
           color: white;
@@ -57,6 +60,9 @@
           align-self: center;
           margin-bottom: 3px;
         }
+      }
+      .catalog-colors-item-active {
+        opacity: 1;
       }
     }
   }

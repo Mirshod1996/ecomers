@@ -6,6 +6,7 @@ Variables
 
 :root {
   /* dark shades of primary color*/
+
   --clr-black: rgba(22, 28, 36, 1);
   --clr-grey-1: rgba(69, 79, 91, 1);
   --clr-blue-1: rgba(66, 149, 228, 1);
@@ -64,6 +65,9 @@ body {
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
+}
+.active {
+  color: var(--clr-blue-3);
 }
 ul {
   list-style-type: none;
@@ -159,10 +163,6 @@ ul {
   border: 2px solid red;
 }
 
-.active {
-  color: red;
-}
-
 @media screen and (max-width: 992px) {
   .container {
     max-width: 95vw;
@@ -209,6 +209,28 @@ ul {
   color: var(--clr-black);
   background: var(--clr-blue-2);
 }
+
+.btn-clear {
+  text-transform: uppercase;
+  background: var(--clr-black);
+  color: var(--clr-white);
+  padding: 0.375rem 0.75rem;
+  margin: 5px;
+  letter-spacing: var(--spacing);
+  display: inline-block;
+  font-weight: 400;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: var(--radius);
+  border-color: transparent;
+}
+.btn-clear:hover {
+  background: var(--clr-grey-5);
+  color: var(--clr-white);
+}
+
 .title {
   text-align: center;
 }

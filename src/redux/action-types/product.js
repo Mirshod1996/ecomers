@@ -1,0 +1,4 @@
+export const SET_PRODUCTS = "SET_PRODUCTS";
+export const SET_FILTER = "SET_FILTER";
+export const SET_FILTER_VALUES = "SET_FILTER_VALUES";
+export const CLEAR_FILTER_VALUES = "CLEAR_FILTER_VALUES";

@@ -1,8 +1,9 @@
 .products-title {
   display: flex;
   justify-content: space-between;
-  margin-top: var(--margin-100);
+  margin-top: var(--margin-50);
   margin-bottom: var(--margin-100);
+
   @media screen and (max-width: 760px) {
     margin-top: var(--margin-50);
     margin-bottom: var(--margin-50);
@@ -34,6 +35,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+
   @media screen and (max-width: 760px) {
     flex-wrap: nowrap;
     flex-direction: column;
@@ -62,6 +64,7 @@
   }
   .card-main {
     padding: 0px 10px;
+
     h3 {
       margin-top: var(--margin-30);
     }
@@ -90,6 +93,7 @@
     .price {
       display: flex;
       align-items: center;
+      height: 20px;
       .card-price {
         color: var(--clr-blue-3) !important;
       }
