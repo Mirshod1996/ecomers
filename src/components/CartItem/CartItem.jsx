@@ -1,24 +1,38 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./CartItem.scss";
-const CartItem = () => {
+import { changeProductCart } from "../../redux/action-creator/cart";
+import { deleteProductInCart } from "../../redux/action-creator/cart";
+import { useState } from "react";
+
+const CartItem = ({ image, color, name, price, stock, id, max }) => {
+  const dispatch = useDispatch();
+  const [newStock, setNewStock] = useState(stock);
+  const incrementStock = () => {
+    if (newStock <= max) {
+      setNewStock((newStock) => newStock + 1);
+    }
+    dispatch(changeProductCart(newStock, id));
+  };
+  const decrementStock = () => {
+    if (newStock > 1) {
+      setNewStock((newStock) => newStock - 1);
+    }
+    dispatch(changeProductCart(newStock, id));
+  };
   return (
     <div className="cart__item">
       <div className="cart__img">
         <div className="item__image">
-          <img
-            src={
-              "https://dl.airtable.com/.attachments/97a67b32630a587e482863a61861607b/547d4b22/product-6.jpg?ts=1656924121&userId=usrQMwWEPx18KgLcP&cs=09efcee4dde0531a"
-            }
-            alt=""
-          />
+          <img src={image} alt="" />
           <div>
-            <h5> emperor bed</h5>
+            <h5>{name}</h5>
 
             <div className="item__image__title">
               <p>Color : </p>
               <div
                 style={{
-                  backgroundColor: "blue",
+                  backgroundColor: color,
                   width: "1rem",
                   height: "1rem",
                   marginLeft: 5,
@@ -30,22 +44,30 @@ const CartItem = () => {
         </div>
       </div>
       <div className="cart__ptice">
-        <p className="cart__price">23999 $</p>
+        <p className="cart__price">{price} $</p>
       </div>
       <div className="cart_quantity">
         <div className="amount__box">
-          <button className="amount__box__btn">-</button> <b>5</b>
-          <button className="amount__box__btn">+</button>
+          <button className="amount__box__btn" onClick={decrementStock}>
+            -
+          </button>{" "}
+          <b>{stock}</b>
+          <button className="amount__box__btn" onClick={incrementStock}>
+            +
+          </button>
         </div>
       </div>
       <div className="cart__subtotal">
-        <p className="cart__subtotal">45632$</p>
+        <p className="cart__subtotal">{stock * price}$</p>
       </div>
       <div className="cart__delete">
         <i>
           <i
             className="trash icon"
             style={{ fontSize: 18, cursor: "pointer" }}
+            onClick={() => {
+              dispatch(deleteProductInCart(id));
+            }}
           ></i>
         </i>
       </div>

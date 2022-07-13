@@ -1,0 +1,22 @@
+.navigate {
+  background-color: var(--clr-blue-4);
+  .navigate__box {
+    padding: 30px 0;
+    display: flex;
+    font-size: 32px;
+    .to {
+      display: flex;
+      h2 {
+        font-size: 32px !important;
+        margin: 0 !important;
+        padding-top: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 760px) {
+    .navigate__box {
+      font-size: 24px;
+    }
+  }
+}

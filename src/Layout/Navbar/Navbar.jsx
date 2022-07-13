@@ -3,16 +3,23 @@ import Logo from "../../assets/images/LogoTop.png";
 import "./Navbar.scss";
 import "../../assets/styles/main.css";
 import { Link, NavLink } from "react-router-dom";
-
-import {
-  PhoneOutlined,
-  HeartOutlined,
-  ShoppingCartOutlined,
-} from "@ant-design/icons";
+import { Badge } from "antd";
+import { useSelector } from "react-redux";
+import { PhoneOutlined, HeartOutlined } from "@ant-design/icons";
 
 const Navbar = () => {
-  
   const setActive = ({ isActive }) => (isActive ? "active" : "");
+
+  const allProductsStok = useSelector((state) => state.cartPage.cartProducts);
+
+  const stock = allProductsStok.map((el) => {
+    return el.stock;
+  });
+  let result = 0;
+  for (let i = 0; i <= stock.length - 1; i++) {
+    result += stock[i];
+  }
+
   return (
     <div className="nav">
       <div className="container">
@@ -53,7 +60,9 @@ const Navbar = () => {
               <div className="icon">
                 <Link to="/cart">
                   {" "}
-                  <ShoppingCartOutlined className="icon" />
+                  <Badge count={result}>
+                    <i className="cart arrow down icon"></i>
+                  </Badge>
                 </Link>
               </div>
             </div>

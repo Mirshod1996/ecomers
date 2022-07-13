@@ -62,11 +62,15 @@ const CatalogProducts = () => {
                 setNewData(data);
               }}
             />
-            <div className="catalog-products-box">
-              {newData.map((item, index) => {
-                return <Card {...item} key={item.id + index} />;
-              })}
-            </div>
+            {newData.length == 0 ? (
+              <p>Sorry, no products matched your search.</p>
+            ) : (
+              <div className="catalog-products-box">
+                {newData.map((item, index) => {
+                  return <Card {...item} key={item.id + index} />;
+                })}
+              </div>
+            )}
           </div>
         </div>
       </div>

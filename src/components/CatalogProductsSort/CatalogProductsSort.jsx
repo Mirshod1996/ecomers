@@ -1,5 +1,4 @@
 import "./CatalogProductsSort.scss";
-import { BarsOutlined, AppstoreOutlined } from "@ant-design/icons";
 
 const CatalogProductsSort = ({ productsLength, newData, setNewData }) => {
   const sortProducts = (event) => {
@@ -29,13 +28,6 @@ const CatalogProductsSort = ({ productsLength, newData, setNewData }) => {
   return (
     <div className="catalog-products-sort">
       <div className="catalog-products-sort-icons">
-        <button className="catalog-icon">
-          <AppstoreOutlined />
-        </button>
-        <button className="catalog-icon">
-          <BarsOutlined />
-        </button>
-
         <span className="catalog-products-sort-icons-title">
           <p> {productsLength} Products Found</p>
         </span>

@@ -21,10 +21,11 @@
   margin-top: var(--margin-30);
 }
 .subtotal {
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 50px;
   .order__total__box {
     border: 1px solid black;
     width: 400px;
@@ -54,4 +55,10 @@
     margin-top: 0.5rem;
     width: 400px;
   }
+}
+.empty__cart {
+  width: 100%;
+  text-align: center;
+  margin-top: 100px;
+  height: 50vh;
 }
