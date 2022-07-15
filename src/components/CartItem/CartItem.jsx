@@ -9,16 +9,21 @@ const CartItem = ({ image, color, name, price, stock, id, max }) => {
   const dispatch = useDispatch();
   const [newStock, setNewStock] = useState(stock);
   const incrementStock = () => {
-    if (newStock <= max) {
-      setNewStock((newStock) => newStock + 1);
+    if (newStock < max) {
+      setNewStock((newStock) => {
+
+          dispatch(changeProductCart(newStock+1, id));
+          return newStock + 1});
     }
-    dispatch(changeProductCart(newStock, id));
+
   };
   const decrementStock = () => {
     if (newStock > 1) {
-      setNewStock((newStock) => newStock - 1);
+      setNewStock((newStock) => {
+          dispatch(changeProductCart(newStock-1, id));
+          return newStock - 1
+      });
     }
-    dispatch(changeProductCart(newStock, id));
   };
   return (
     <div className="cart__item">

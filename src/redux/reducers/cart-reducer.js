@@ -67,10 +67,7 @@ export const cartReducer = (state = initialState, { type, payload }) => {
         if (item.id === payload.id) {
           item.stock = payload.stock;
         }
-        return {
-          ...item,
-          stock: payload.stock,
-        };
+        return item
       });
       return {
         ...state,
